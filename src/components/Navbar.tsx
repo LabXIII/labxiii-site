@@ -1,25 +1,34 @@
+import { useState } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="bg-white dark:bg-gray-800 p-4 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold text-gray-900 dark:text-white">
+    <motion.nav
+      className="fixed top-0 w-full bg-white dark:bg-black shadow-md z-50"
+      initial={{ y: -10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="text-2xl font-bold text-gray-800 dark:text-gray-200">
           LabXIII
-        </Link>
-        <div className="flex space-x-4">
-          <Link href="/about" className="text-gray-700 dark:text-gray-300 hover:underline">
-            About
-          </Link>
-          <Link href="/portfolio" className="text-gray-700 dark:text-gray-300 hover:underline">
-            Portfolio
-          </Link>
-          <Link href="/contact" className="text-gray-700 dark:text-gray-300 hover:underline">
-            Contact
-          </Link>
+        </div>
+        <div className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          <button className="text-gray-800 dark:text-gray-200 focus:outline-none">
+            {isOpen ? 'Close' : 'Menu'}
+          </button>
+        </div>
+        <div className={`md:flex space-x-4 ${isOpen ? 'block' : 'hidden'}`}>
+          <Link href="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-500">Home</Link>
+          <Link href="/about" className="text-gray-700 dark:text-gray-300 hover:text-blue-500">About</Link>
+          <Link href="/portfolio" className="text-gray-700 dark:text-gray-300 hover:text-blue-500">Portfolio</Link>
+          <Link href="/contact" className="text-gray-700 dark:text-gray-300 hover:text-blue-500">Contact</Link>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

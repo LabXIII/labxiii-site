@@ -1,12 +1,12 @@
-const Footer = () => {
-    return (
-      <footer className="bg-white dark:bg-gray-800 p-4 mt-8">
-        <div className="container mx-auto text-center text-gray-700 dark:text-gray-300">
-          <p>&copy; {new Date().getFullYear()} LabXIII. All rights reserved.</p>
-        </div>
+coconst Footer = () => {
+  return (
+      <footer className="bg-white dark:bg-black p-4">
+          <div className="container mx-auto text-center text-gray-600 dark:text-gray-400">
+              <p>&copy; {new Date().getFullYear()} LabXIII. All Rights Reserved.</p>
+          </div>
       </footer>
-    );
-  };
-  
-  export default Footer;
+  );
+};
+
+export default Footer;ooter;
   
