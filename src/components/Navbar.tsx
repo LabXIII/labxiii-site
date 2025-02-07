@@ -9,7 +9,7 @@ const Navbar = () => {
     <motion.nav
       className="fixed top-0 w-full bg-white dark:bg-black shadow-md z-50"
       initial={{ y: -10, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      animate={{ y: 0, opacity: , y: [-10, 0]1 }}
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">

@@ -29,7 +29,10 @@ export default function Home() {
                             </h1>
                             <p className="mt-4 text-gray-600 dark:text-gray-400">
                                 Explore our AI projects and learn more about us.
-                            </p>
+                            <
+                <motion.button whileHover={{ scale: 1.1 }} className="mt-6 px-4 py-2 bg-blue-500 text-white rounded">
+                    Learn More
+                </motion.button>/p>
                         </div>
                     </div>
                 </motion.div>
