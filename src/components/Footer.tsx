@@ -1,12 +1,15 @@
-coconst Footer = () => {
-  return (
-      <footer className="bg-white dark:bg-black p-4">
-          <div className="container mx-auto text-center text-gray-600 dark:text-gray-400">
-              <p>&copy; {new Date().getFullYear()} LabXIII. All Rights Reserved.</p>
-          </div>
-      </footer>
-  );
+import React from 'react';
+
+const Footer: React.FC = () => {
+    return (
+        <footer className="bg-white dark:bg-black p-4">
+            <div className="container mx-auto text-center text-gray-600 dark:text-gray-400">
+                <p>&copy; {new Date().getFullYear()} LabXIII. All Rights Reserved.</p>
+            </div>
+        </footer>
+    );
 };
 
-export default Footer;ooter;
+export default Footer;
+
   
